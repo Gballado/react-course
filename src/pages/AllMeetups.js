@@ -1,3 +1,6 @@
+import MeetupList from "../components/meetups/MeetupList";
+
+// Render a list of data by mapping it. No matter the list of jsx data, now we can use it as an array and apply the same concept.
 const DUMMY_DATA = [
   {
     id: "m1",
@@ -23,11 +26,7 @@ function AllMeetupsPage() {
   return (
     <section>
       <h1>All Meetups</h1>
-      <ul>
-        {DUMMY_DATA.map((meetup) => {
-          return <li key={meetup.id}>{meetup.title}</li>;
-        })}
-      </ul>
+      <MeetupList meetups={DUMMY_DATA} />
     </section>
   );
 }
